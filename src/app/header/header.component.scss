@@ -1,0 +1,72 @@
+.navbar {
+  -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
+}
+
+.navbar-default .container-fluid {
+  position: relative;
+}
+.navbar-default button {
+  background-color: white;
+    font-family: "Montserrat", sans-serif;
+    padding: 14px 40px;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 10px 8px 10px;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    border: 2px solid #0366d6;
+    color: #0366d6;
+    font-weight: bold;
+}
+.blue{
+  background-color: #0366d6;
+  height: 20px;
+}
+.navbar-header {
+
+    margin-left: 25px;
+    margin-top: 10px;
+}
+
+/* Blue */
+.info {
+  border: 2px solid #0366d6;
+  color: #0366d6
+}
+
+.navbar-brand {
+  padding: 0px;
+  display: flex;
+align-items: center;
+}
+.navbar-brand>img {
+  padding: 15px;
+}
+
+// line height is 20px by default so add 30px top and bottom to equal the new .navbar-brand 80px height  */
+
+.navbar-brand {
+  height: 80px;
+}
+
+.logo-text {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+}
+.logo-brand{
+  margin-right: 15px;
+}
+
+// .nav >li >a {
+//   padding-top: 30px;
+//   padding-bottom: 30px;
+// }
+// .navbar-toggle {
+//   padding: 10px;
+//   margin: 25px 15px 25px 0;
+// }
