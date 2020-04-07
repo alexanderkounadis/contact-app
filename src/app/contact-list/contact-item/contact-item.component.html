@@ -1,1 +1,17 @@
-<p>contact-item works!</p>
+<button class="collapsible" clickCatcher>{{contact.name}}</button>
+    <div class="content">
+      <div class="pull-right edit-button">
+        [ <span class="edit-literal" (click)="onDeleteMember()">Delete</span> ]
+      </div>
+      <div class="pull-right edit-button">
+        [ <span class="edit-literal" (click)="onEditMember()">Edit</span> ]
+      </div>
+      <div class="info-container">
+        <img src="assets/img/user.jpg" alt="Avatar">
+        <div class="info">
+          <p class="email">{{contact.email}}</p>
+          <p>{{contact.address.street}}, {{contact.address.suite}}</p>
+          <p>{{contact.address.zipcode}}, {{contact.address.city}}</p>
+        </div>
+      </div>
+    </div>

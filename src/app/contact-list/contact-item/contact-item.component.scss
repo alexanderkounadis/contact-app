@@ -1,0 +1,81 @@
+.collapsible {
+  border:1px solid rgba($color: #000000, $alpha: 0.1);
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+  padding: 15px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  margin-top: 10px;
+}
+
+.active, .collapsible:hover {
+  background-color:#F5F5F5
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: #808080;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+.content.collapsed{
+  max-height:0;
+}
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  background-color:#fff;
+  border:1px solid rgba($color: #000000, $alpha: 0.1);
+  border-top: 0;
+  img{
+    border-radius: 50%;
+    width:70px;
+    vertical-align: top;
+    display: inline-block;
+  }
+}
+.info-container {
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+.info{
+  display: inline-block;
+  margin-left: 20px;
+  p{
+    color: grey;
+    font-size: 12px;
+    opacity: 0.5;
+    font-family: "Roboto", sans-serif;
+  }
+  .email {
+    color: #0366d6;
+    cursor: pointer;
+
+  }
+  .email:hover {
+    font-weight: bold;
+  }
+}
+  .edit-button {
+    margin-top: 20px;
+  }
+  .edit-literal{
+    color: #0366d6;
+    cursor: pointer;
+    font-size: 12px;
+  }
+  .edit-literal:hover {
+    font-weight: 500;
+  }
+

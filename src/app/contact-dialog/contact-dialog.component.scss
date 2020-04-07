@@ -1,0 +1,39 @@
+.cdk-overlay-pane.my-dialog {
+  position: relative!important;
+}
+.close.mat-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 5px;
+  line-height: 14px;
+  min-width: auto;
+}
+
+hr{
+  margin-top:0px;
+}
+h4,h5{
+  font-family: "Montserrat", sans-serif;
+}
+label {
+  font-family: "Montserrat", sans-serif;
+  color: rgba($color: #000000, $alpha: 0.4);
+}
+
+.submit-btn {
+  border: 2px solid #0366d6;
+  color: #0366d6;
+  cursor: pointer;
+  background-color: white;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  padding: 10px 25px;
+}
+.submit-btn:hover:enabled {
+  color: white;
+  background-color: #0366d6;
+}
+.submit-btn:disabled {
+  color: #dddddd;
+}
