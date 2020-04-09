@@ -1,8 +1,7 @@
-import { Observable, pipe, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { ContactService } from './services/contact.service';
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Contact } from './models/server';
-import { tap } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-root',

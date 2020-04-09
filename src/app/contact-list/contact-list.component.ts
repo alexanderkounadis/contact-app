@@ -18,9 +18,15 @@ import { Subscription } from "rxjs";
   styleUrls: ["./contact-list.component.scss"]
 })
 export class ContactListComponent implements OnInit, OnDestroy {
+  // this subscription subscribes to our services actions that change
+  // our contact list in order to keep our contact list up to date
   private contactsChangedSub = new Subscription();
+
   contacts: Contact[];
+
+  // contacts filtered according to user input in search field
   filteredContacts: Contact[];
+
   counter: number;
   @Output() private contactChanged = new EventEmitter();
 
@@ -33,6 +39,7 @@ export class ContactListComponent implements OnInit, OnDestroy {
     this.filteredContacts = this.filterContacts(text);
   }
 
+  // return contacts filtered by user's search input text
   filterContacts(searchTerm: string) {
     return this.contacts.filter(
       contact =>
@@ -46,16 +53,21 @@ export class ContactListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit() {
+    // subscribe to contact list changes in order to keep our ui in sync
+    // with our data changes
     this.contactsChangedSub = this.contactService.contactsChanged.subscribe(
       (newContacts: Contact[]) => {
         this.contacts = newContacts;
         this.counter = this.contacts.length;
       }
     );
+    // get contact list on load
     this.contacts = this.contactService.getContacts();
     this.filteredContacts = this.contacts;
   }
 
+  // to prevent memory leaks kill the subscriptions
+  // when the component is unloaded
   ngOnDestroy() {
     this.contactsChangedSub.unsubscribe();
   }

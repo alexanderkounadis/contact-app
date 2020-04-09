@@ -1,3 +1,5 @@
+@import '../../assets/variables.scss';
+
 .cdk-overlay-pane.my-dialog {
   position: relative!important;
 }
@@ -14,26 +16,26 @@ hr{
   margin-top:0px;
 }
 h4,h5{
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-Montserrat;
 }
 label {
-  font-family: "Montserrat", sans-serif;
-  color: rgba($color: #000000, $alpha: 0.4);
+  font-family: $font-Montserrat;
+  color:$label-black;
 }
 
 .submit-btn {
-  border: 2px solid #0366d6;
-  color: #0366d6;
+  border: 2px solid $primary-blue;
+  color: $primary-blue;
   cursor: pointer;
   background-color: white;
-  font-family: "Montserrat", sans-serif;
+  font-family: $font-Montserrat;
   font-weight: 700;
   padding: 10px 25px;
 }
 .submit-btn:hover:enabled {
   color: white;
-  background-color: #0366d6;
+  background-color:$primary-blue;
 }
 .submit-btn:disabled {
-  color: #dddddd;
+  color:$light-grey;
 }

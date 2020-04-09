@@ -1,11 +1,12 @@
+@import '../../assets/variables.scss';
 .navbar {
   -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
-    border-top: 30px solid  #0366d6;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
+  -moz-box-shadow: 0 8px 6px -6px #999;
+  box-shadow: 0 8px 6px -6px #999;
+  border-top: 30px solid  $primary-blue;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
 }
 
 .navbar-default .container-fluid {
@@ -13,7 +14,7 @@
 }
 .navbar-default button {
   background-color: white;
-    font-family: "Montserrat", sans-serif;
+    font-family: $font-Montserrat;
     padding: 14px 40px;
     font-size: 14px;
     cursor: pointer;
@@ -23,17 +24,17 @@
     top: 50%;
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
-    border: 2px solid #0366d6;
-    color: #0366d6;
+    border: 2px solid $primary-blue;
+    color: $primary-blue;
     font-weight: bold;
 }
 
 .navbar-default button:hover {
   color: white;
-  background-color: #0366d6;
+  background-color:$primary-blue;
 }
 .blue{
-  background-color: #0366d6;
+  background-color: $primary-blue;
   height: 20px;
 }
 .navbar-header {
@@ -44,14 +45,14 @@
 
 /* Blue */
 .info {
-  border: 2px solid #0366d6;
-  color: #0366d6
+  border: 2px solid $primary-blue;
+  color: $primary-blue
 }
 
 .navbar-brand {
   padding: 0px;
   display: flex;
-align-items: center;
+  align-items: center;
 }
 .navbar-brand>img {
   padding: 15px;
@@ -64,7 +65,7 @@ align-items: center;
 }
 
 .logo-text {
-  font-family: 'Montserrat', sans-serif;
+  font-family: $font-Montserrat;
   font-size: 24px;
 }
 .logo-brand{

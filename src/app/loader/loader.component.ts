@@ -11,6 +11,8 @@ export class LoaderComponent implements OnInit {
   color = 'primary';
   mode = 'indeterminate';
   value = 50;
+  // the appearance of this component is in direct dependency
+  // with the contacts service
   isLoading: Subject<boolean> = this.contactsService.contactsReceived;
   constructor(private contactsService: ContactService){}
 

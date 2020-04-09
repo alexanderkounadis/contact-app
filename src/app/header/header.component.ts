@@ -2,7 +2,6 @@ import { Component, OnInit, EventEmitter } from '@angular/core';
 import { MatDialogConfig, MatDialog } from '@angular/material/dialog';
 import { ContactDialogComponent } from '../contact-dialog/contact-dialog.component';
 import { filter, tap } from 'rxjs/operators';
-import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-header',

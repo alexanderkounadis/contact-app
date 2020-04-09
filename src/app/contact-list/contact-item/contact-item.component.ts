@@ -21,6 +21,7 @@ export class ContactItemComponent implements OnInit {
     dialogConfig.autoFocus = true;
     dialogConfig.width = "600px";
     dialogConfig.data = {
+      // data for the modal customization (title etc)
       title: "update",
       contact: this.contact
     };

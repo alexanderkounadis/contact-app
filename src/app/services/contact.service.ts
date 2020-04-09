@@ -16,9 +16,15 @@ export class ContactService {
 
   constructor(private http: HttpClient) {}
 
+
+  // SOS: the demo server does not support real post/put/delete actions.
+  // therefore, I decided to load its data in memory initially and perform
+  // these data modification actions locally in memory.this means that our ui
+  // changes are not reflected in any backend - when we do a refresh changes are gone!
   getContacts(): Contact[] {
     this.http
       .get<Contact[]>(this.contactsUrl)
+      // i simulated a deleay in order to see loading indicator
       .pipe(delay(1000))
       .subscribe(data => {
         this.contacts.push(...data);

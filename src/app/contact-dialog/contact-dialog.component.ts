@@ -25,6 +25,8 @@ export class ContactDialogComponent implements OnInit {
     this.header = this.setHeader();
   }
 
+  // modal header is set dynamically depending on the function (add/update/delete) we want
+  // to execute
   private setHeader() {
     if (this.modalData.title === "add") {
       return "Add Member";
@@ -34,15 +36,22 @@ export class ContactDialogComponent implements OnInit {
       return "Delete Member";
     }
   }
+
   onClose() {
     this.dialogRef.close();
   }
+
   onSubmit() {
     this.modalData.contact = this.contactForm.value;
+    // modal service is a helper service that prepares some dynamic
+    // features and knows which call (add/update/delete) corresponds to
+    // user's choice
     this.modalService.modalAction(this.modalData);
+    // close modal after user action
     this.onClose();
   }
 
+  // modal form initialization depending on what it serves (add/update/delete)
   private initForm() {
     if (this.modalData.title === "add") {
       this.contactForm = new FormGroup({
